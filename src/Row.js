@@ -25,6 +25,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
     }, [fetchUrl]);
 
+    // here we control trailer's size 
     const opts = {
         height: "390",
         width: "100%",
@@ -68,6 +69,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
             </div>
 
+            {/* here, if the trailer doesn't existe, we don't show it */}
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
 
         </div>
